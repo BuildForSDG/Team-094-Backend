@@ -1,4 +1,4 @@
 from django.urls import path
-from .views import (SocialLoginView)
+from .views import (SocialSerializer)
 
-urlpatterns = [path('oauth/login/', SocialLoginView.as_view())]
+urlpatterns = [path('oauth/login/', SocialSerializer.as_view())]

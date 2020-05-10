@@ -75,12 +75,14 @@ TEMPLATES = [
 ]
 
 REST_FRAMEWORK = {
-    ...
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        ...
-        # 'oauth2_provider.ext.rest_framework.OAuth2Authentication',  # django-oauth-toolkit < 1.0.0
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
         'oauth2_provider.contrib.rest_framework.OAuth2Authentication',  # django-oauth-toolkit >= 1.0.0
         'rest_framework_social_oauth2.authentication.SocialAuthentication',
+    ),
+
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
     ),
 }
 
@@ -115,6 +117,14 @@ SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
 FACEBOOK_EXTENDED_PERMISSIONS = ['email']
 SOCIAL_AUTH_ADMIN_USER_SEARCH_FIELDS = ['username', 'first_name', 'email']
 SOCIAL_AUTH_USERNAME_IS_FULL_EMAIL = True
+
+for key in ['GOOGLE_OAUTH2_KEY',
+            'GOOGLE_OAUTH2_SECRET',
+            'FACEBOOK_KEY',
+            'FACEBOOK_SECRET']:
+    # Use exec instead of eval here because we're not just trying to evaluate a dynamic value here;
+    # we're setting a module attribute whose name varies.
+    exec("SOCIAL_AUTH_{key} = os.environ.get('{key}')".format(key=key))
 
 SOCIAL_AUTH_PIPELINE = (
 'social_core.pipeline.social_auth.social_details',
