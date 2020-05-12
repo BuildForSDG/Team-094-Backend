@@ -10,7 +10,7 @@ class Login(models.Model):
     description = models.TextField() 
     url = models.CharField(max_length=400) 
     date = models.DateTimeField('Date published') 
-    tags = TagField() 
+    tags = TagField()
     status = models.IntegerField(default=1) 
     
     class Meta: 
