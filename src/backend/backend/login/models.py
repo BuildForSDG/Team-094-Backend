@@ -1,5 +1,3 @@
-from django.db import models
-
 from django.db import models 
 from tagging.fields import TagField 
 from tagging.models import Tag 
