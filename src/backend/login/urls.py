@@ -1,7 +1,7 @@
 from django.urls import path
 from django.urls import path
-from . import views 
+from . import views
 
 urlpatterns = [
-    path('api/login/', views.SocialSerializer.as_view() ),
+    path('api/login/', views.LoginListCreate.as_view() ),
 ]
