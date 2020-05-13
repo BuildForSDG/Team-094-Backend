@@ -5,7 +5,7 @@ from django.db import models
 # Create your models here.
 class Login(models.Model):
     name = models.CharField(max_length=200) 
-    address = models.TextField() 
+    location_address = models.TextField() 
     email = models.CharField(max_length=400) 
     date = models.DateTimeField('Date published')
     created_at = models.DateTimeField(auto_now_add=True) 
