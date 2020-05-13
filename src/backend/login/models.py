@@ -6,7 +6,7 @@ from django.db import models
 class Login(models.Model):
     name = models.CharField(max_length=200) 
     email = models.EmailField() 
-    location_address = models.CharField(max_length=400) 
+    location = models.CharField(max_length=400) 
     date = models.DateTimeField('Date published')
     created_at = models.DateTimeField(auto_now_add=True) 
     status = models.IntegerField(default=1) 
