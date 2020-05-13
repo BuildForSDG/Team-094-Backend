@@ -1,5 +1,8 @@
 from django.db import models
 from django.db import models 
+from .storage import DjangoUserMixin, DjangoAssociationMixin, \
+                     DjangoNonceMixin, DjangoCodeMixin, \
+                     DjangoPartialMixin, BaseDjangoStorage
 
 
 # Create your models here.
@@ -31,4 +34,3 @@ class DjangoStorage(BaseDjangoStorage):
     @classmethod
     def is_integrity_error(cls, exception):
         return exception.__class__ is IntegrityError
-© 2020 GitHub, Inc.
