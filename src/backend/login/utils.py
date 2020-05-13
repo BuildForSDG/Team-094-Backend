@@ -11,9 +11,9 @@ from .compat import reverse
 
 BACKENDS = settings.AUTHENTICATION_BACKENDS
 STRATEGY = getattr(settings, setting_name('STRATEGY'),
-                   'social_django.strategy.DjangoStrategy')
+                   'login.strategy.DjangoStrategy')
 STORAGE = getattr(settings, setting_name('STORAGE'),
-                  'social_django.models.DjangoStorage')
+                  'login.models.DjangoStorage')
 Strategy = module_member(STRATEGY)
 Storage = module_member(STORAGE)
 
