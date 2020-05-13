@@ -21,3 +21,14 @@ class Login(models.Model):
         return "/link/%s/" %(self.id) 
 
 # Create your models here.
+class DjangoStorage(BaseDjangoStorage):
+    user = UserSocialAuth
+    nonce = Nonce
+    association = Association
+    code = Code
+    partial = Partial
+
+    @classmethod
+    def is_integrity_error(cls, exception):
+        return exception.__class__ is IntegrityError
+© 2020 GitHub, Inc.
