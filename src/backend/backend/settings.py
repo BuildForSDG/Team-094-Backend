@@ -70,6 +70,7 @@ REST_FRAMEWORK = {
     ),
 }
 '''
+SOCIAL_AUTH_STORAGE = 'social_django_mongoengine.models.DjangoStorage'
 
 # Facebook configuration
 SOCIAL_AUTH_FACEBOOK_KEY = '3689367207804765'
