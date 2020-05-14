@@ -26,6 +26,8 @@ from login import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('login.urls')),
+    path('o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
+    path('authentication/', include('login.urls')),
 #    url(r'^api-login/', include('rest_framework.urls'))
 #    path(r'^login/', include('login.urls')),
 ]

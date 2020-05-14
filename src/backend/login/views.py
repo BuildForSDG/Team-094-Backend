@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .models import Login
 from .serializers import LoginSerializer
-from rest_framework import generics
+from rest_framework import generics, viewsets
 from django.shortcuts import redirect, render
 from django.contrib.auth import logout as auth_logout
 from django.contrib.auth.decorators import login_required
@@ -10,6 +10,11 @@ from django.contrib.auth.decorators import login_required
 class LoginListCreate(generics.ListCreateAPIView):
     queryset = Login.objects.all()
     serializer_class = LoginSerializer
+
+class LoginViewSet(viewsets.ModelViewSet):
+    queryset = Login.objects.all()
+    serializer_class = LoginSerializer
+
 
 def login(request):
     # context = RequestContext(request, {
