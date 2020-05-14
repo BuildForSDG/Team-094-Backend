@@ -6,7 +6,8 @@ from django.db import models
 class Login(models.Model):
     name = models.CharField(max_length=200) 
     email = models.EmailField() 
-    location = models.CharField(max_length=400) 
+    location = models.CharField(max_length=400)
+    phone = models.CharField(max_length=20) 
     date = models.DateTimeField('Date published')
     created_at = models.DateTimeField(auto_now_add=True) 
     status = models.IntegerField(default=1) 
@@ -20,4 +21,3 @@ class Login(models.Model):
     def get_absolute_url(self): 
         return "/link/%s/" %(self.id) 
 
-# Create your models here.
