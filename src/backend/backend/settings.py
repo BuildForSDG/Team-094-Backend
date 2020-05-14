@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework_social_oauth2',
     'rest_framework',
+    'oauth2_provider',
     'corsheaders',
     'backend',
     'login.apps.LoginConfig',
