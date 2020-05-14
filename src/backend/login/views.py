@@ -8,3 +8,4 @@ class LoginListCreate(generics.ListCreateAPIView):
     queryset = Login.objects.all()
     serializer_class = LoginSerializer
 
+
