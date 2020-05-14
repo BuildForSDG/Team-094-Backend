@@ -9,7 +9,7 @@ class Login(models.Model):
     location = models.CharField(max_length=400)
     phone = models.CharField(max_length=20) 
     date = models.DateField('Date Published', auto_now_add=True)
-    created_at = models.DateTimeField(auto_now_add=True) 
+    created_at = models.DateTimeField('Date', auto_now_add=True) 
     status = models.IntegerField(default=1) 
     
     class Meta: 
