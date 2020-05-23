@@ -61,6 +61,14 @@ AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
 ]
 
+SOCIAL_AUTH_FACEBOOK_KEY = 260899555100091        # App ID
+SOCIAL_AUTH_FACEBOOK_SECRET = '902101c4129802483da1bba0593cfd71'  # App Secret
+
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_URL = 'logout'
+LOGOUT_REDIRECT_URL = 'login'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
