@@ -93,8 +93,14 @@ SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 't_TB4I6i0BCuDQCwftUIhF8B'
 
 SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
 SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
-    'fields': 'id, name, email'
+    'fields': 'id, name, email, picture.type(large), link'
 }
+SOCIAL_AUTH_FACEBOOK_EXTRA_DATA = [          
+    ('name', 'name'),
+    ('email', 'email'),
+    ('picture', 'picture'),
+    ('link', 'profile_url'),
+]
 
 SOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [
     'https://www.googleapis.com/auth/userinfo.email',
