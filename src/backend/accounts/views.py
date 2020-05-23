@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from django.conf import settings
-
+'''
 from rest_framework import serializers
 from rest_framework import status
 from rest_framework.authtoken.models import Token
@@ -12,7 +12,7 @@ from rest_framework.response import Response
 from requests.exceptions import HTTPError
 
 from social_django.utils import psa
-
+'''
 # Create your views here.
 def login(request):
       return render(request, 'login.html')
@@ -25,7 +25,7 @@ def profile(request):
     return render(request, 'profile.html')
 
 
-
+'''
 class SocialSerializer(serializers.Serializer):
     """
     Serializer which accepts an OAuth2 access token.
@@ -106,3 +106,4 @@ def exchange_token(request, backend):
                 {'errors': {nfe: "Authentication Failed"}},
                 status=status.HTTP_400_BAD_REQUEST,
             )
+'''
