@@ -53,18 +53,6 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'backend.urls'
 
-AUTHENTICATION_BACKENDS = [
-    'social_core.backends.linkedin.LinkedinOAuth2',
-    'social_core.backends.instagram.InstagramOAuth2',
-    'social.backends.google.GoogleOAuth2',
-    'social_core.backends.facebook.FacebookOAuth2',
-    'django.contrib.auth.backends.ModelBackend',
-]
-
-SOCIAL_AUTH_FACEBOOK_KEY = 260899555100091        # App ID
-SOCIAL_AUTH_FACEBOOK_SECRET = '902101c4129802483da1bba0593cfd71'  # App Secret
-
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -83,8 +71,20 @@ TEMPLATES = [
     },
 ]
 
+
+AUTHENTICATION_BACKENDS = [
+    'social_core.backends.linkedin.LinkedinOAuth2',
+    'social_core.backends.instagram.InstagramOAuth2',
+    'social.backends.google.GoogleOAuth2',
+    'social_core.backends.facebook.FacebookOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+]
+
+SOCIAL_AUTH_FACEBOOK_KEY = 260899555100091        # App ID
+SOCIAL_AUTH_FACEBOOK_SECRET = '902101c4129802483da1bba0593cfd71'  # App Secret
+
 LOGIN_URL = 'login'
-LOGIN_REDIRECT_URL = 'profile'
+LOGIN_REDIRECT_URL = 'home'
 LOGOUT_URL = 'logout'
 LOGOUT_REDIRECT_URL = 'login'
 
