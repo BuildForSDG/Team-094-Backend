@@ -1,6 +1,6 @@
 from django.db import models
-from tagging.fields import TagField 
-from tagging.models import Tag 
+#from tagging.fields import TagField 
+#from tagging.models import Tag 
 
 # Create your models here.
 '''

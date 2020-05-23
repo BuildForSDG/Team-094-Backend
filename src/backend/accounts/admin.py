@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.login.models import Login
+#from django.login.models import Login
 
 # Register your models here.
 '''
