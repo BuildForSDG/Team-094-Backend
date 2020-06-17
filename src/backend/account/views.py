@@ -32,3 +32,12 @@ def services(request):
 
 def contact(request):
     return render(request, 'contact.html')
+
+def report(request):
+    return render(request, 'report.html')
+
+def paramedics(request):
+    return render(request, 'paramedics.html')
+
+def fireservice(request):
+    return render(request, 'fire-service.html')

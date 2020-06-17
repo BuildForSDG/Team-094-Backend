@@ -29,4 +29,7 @@ urlpatterns = [
     path("whatwe", views.whatwe, name="whatwe"),
     path("services", views.services, name="services"),
     path("contact", views.contact, name="contact"),
+    path("report", views.report, name="report"),
+    path("paramedics", views.paramedics, name="paramedics"),
+    path("fire-service", views.fireservice, name="fireservice"),
 ]
