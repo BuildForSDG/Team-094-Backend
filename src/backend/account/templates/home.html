@@ -4,6 +4,10 @@
 {% load static %}
 {% block title %} Home {% endblock %}
 {% block content %}
+
+<title>Home | CIDENT - Africa's No 1 accident reporting website</title>
+  </head>
+  <body>
 		<!---strat-wrap----->
 		
 			<!---strat-header----->
@@ -18,11 +22,11 @@
 					<!---start-top-nav---->
 					<div class="top-nav">
 						<ul>
-							<li class="active"><a href="index.html">Home</a></li>
-							<li><a href="about.html">About</a></li>
-							<li><a href="whatwe.html">What we do</a></li>
-							<li><a href="services.html">Services</a></li>
-							<li><a href="contact.html">Contact</a></li>
+							<li class="active"><a href="index">Home</a></li>
+							<li><a href="about">About</a></li>
+							<li><a href="whatwe">What we do</a></li>
+							<li><a href="services">Services</a></li>
+							<li><a href="contact">Contact</a></li>
 							<div class="clear"> </div>
 						</ul>
 					</div>
@@ -58,21 +62,21 @@
 		 		<div class="wrap">
 		 			<div class="mid-grid">
 			 			<h3>PARAMEDICS</h3>
-			 			<a href="paramedics.html"><img src="images/paramedics11.png" title="spares" /></a>
+			 			<a href="paramedics.html"><img src="{% static 'images/paramedics11.png' %}" title="spares" /></a>
 			 			<h4>Hospital, FRSC, NPF etc</h4>
 			 			<p>Do you need urgent hospitalisation? contact any paramedics nearest to you through this channel</p>
 			 			<a class="button" href="paramedics.html">More</a>
 			 		</div>
 			 		<div class="mid-grid">
 			 			<h3>FIRE SERVICE</h3>
-			 			<a href="fire-service.html"><img src="images/fire-truck1.png" title="sales" /></a>
+			 			<a href="fire-service.html"><img src="{% static 'images/fire-truck1.png' %}" title="sales" /></a>
 			 			<h4>Emergency Responds Unit etc</h4>
 			 			<p>Have they been a fire outbreak? contact the required agency through this channel</p>
 			 			<a class="button" href="fire-service.html">More</a>
 			 		</div>
 			 		<div class="mid-grid">
 			 			<h3>REPAIRS</h3>
-			 			<a href="services.html"><img src="images/repair.png" title="repair" /></a>
+			 			<a href="services.html"><img src="{% static 'images/repair.png' %}" title="repair" /></a>
 			 			<h4>Mechanic, Towing Van etc</h4>
 			 			<p>Do you need the services of a mechanic, a towing van etc contact them through this channel</p>
 			 			<a class="button" href="services.html">More</a>
